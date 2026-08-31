@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "tsc && shx chmod +x dist/index.js dist/cli.js",
+    "prepare": "npm run build",
     "watch": "tsc --watch",
     "start": "node ./dist/cli.js"
   },
