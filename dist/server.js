@@ -44,7 +44,8 @@ async function createTmpFile(content, languageId) {
     const fileName = `tmp.${fileExtension}`;
     const filePath = path.join(tmpDir, fileName);
     await fs.promises.writeFile(filePath, content);
-    console.debug(`Temporary file created at: ${filePath}`);
+    // Diagnostics MUST go to stderr: stdout is the MCP JSON-RPC channel for stdio transport.
+    console.error(`Temporary file created at: ${filePath}`);
     return filePath;
 }
 function getFileExtension(languageId) {
@@ -53,7 +54,8 @@ function getFileExtension(languageId) {
 }
 async function executeCommand(command) {
     return new Promise((resolve, reject) => {
-        console.debug(`Executing command: ${command}`);
+        // Diagnostics MUST go to stderr: stdout is the MCP JSON-RPC channel for stdio transport.
+        console.error(`Executing command: ${command}`);
         exec(command, (error, stdout, stderr) => {
             if (error) {
                 reject(`Error: ${error.message}`);
