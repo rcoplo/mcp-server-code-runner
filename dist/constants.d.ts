@@ -1,0 +1,45 @@
+export declare const languageIdToExecutorMap: {
+    javascript: string;
+    php: string;
+    python: string;
+    perl: string;
+    perl6: string;
+    ruby: string;
+    go: string;
+    lua: string;
+    groovy: string;
+    powershell: string;
+    bat: string;
+    shellscript: string;
+    fsharp: string;
+    csharp: string;
+    vbscript: string;
+    typescript: string;
+    coffeescript: string;
+    scala: string;
+    swift: string;
+    julia: string;
+    crystal: string;
+    ocaml: string;
+    r: string;
+    applescript: string;
+    clojure: string;
+    racket: string;
+    scheme: string;
+    ahk: string;
+    autoit: string;
+    dart: string;
+    haskell: string;
+    nim: string;
+    lisp: string;
+    kit: string;
+    v: string;
+    sass: string;
+    scss: string;
+};
+export declare const languageIdToFileExtensionMap: {
+    javascript: string;
+    typescript: string;
+    powershell: string;
+};
+//# sourceMappingURL=constants.d.ts.map
